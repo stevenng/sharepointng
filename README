@@ -1,26 +1,22 @@
 sharepointng.js
 ===============
 
-
 A fast and lightweight JavaScript library that detects SharePoint 2013 specific sites, pages, modes and adds top-level CSS classes for styling.
 
 
 Getting Started
 ---------------
 
-
 This is a self-executing JavaScript file that heavily relies on SharePoint's URL structure, please reference this library in the HEAD element.
 
-```sh
-<head>
-	<script src="sharepointng.js"></script>
-</head>
-```
+	<head>
+		<script src="sharepointng.js"></script>
+	</head>
+
 
 
 List of CSS Class Names (hooks)
 -------------------------------
-
 
 #### Mode Types
 - ng-browse-mode
