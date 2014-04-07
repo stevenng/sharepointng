@@ -1,5 +1,59 @@
-TITLE: Sharepointng
+TITLE: 				Sharepointng
 
-DESCRIPTION: A fast and lightweight JavaScript library that detect SharePoint specific sites, pages, modes and adds top-level CSS classes.
+DESCRIPTION: 	A fast and lightweight JavaScript library that detects SharePoint specific sites, 
+							pages, modes and adds top-level CSS classes for styling.
 
-AUTHOR: Steve Ng 
+AUTHOR: 			Steve Ng 
+
+USAGE: 				This is a self-executing JavaScript file that heavily relies on SharePoint's URL structure, 
+							please reference this library in the <head> element.
+
+
+CLASSES:
+
+// Mode Types
+------------------------
+.ng-browse-mode
+.ng-edit-mode
+.ng-wiki-browse-mode
+.ng-wiki-edit-mode
+
+
+// Browser Types
+------------------------
+.ng-chrome
+.ng-ie10
+
+
+// Device Types
+------------------------
+.ng-android
+.ng-iPhone
+
+
+// Site Types
+------------------------
+.ng-blog
+.ng-collaborate
+.ng-communityportal
+.ng-department
+.ng-knowledgecenter
+.ng-personal
+.ng-search
+
+
+// Section Types
+------------------------
+.ng-lists
+.ng-pages
+.ng-system
+
+
+// Page Types
+------------------------
+.ng-allitems
+.ng-default
+.ng-lists
+.ng-person
+.ng-settings
+.ng-404
