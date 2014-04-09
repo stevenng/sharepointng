@@ -1,5 +1,5 @@
 /** ================================================================
-	*	sharepointng.js v0.3 - Steve Ng
+	*	sharepointng.js v0.4 - Steve Ng
 	*	============================================================ **/
 
 (function(){
@@ -97,8 +97,6 @@
 		*/
 	function modeType(){
 		// Determine if page is in edit mode
-		var displayModeName = document.getElementById('MSOSPWebPartManager_DisplayModeName').value; // Browse or Design
-
 		var inDesignMode = document.getElementById('MSOLayout_InDesignMode').value; // 1 or blank
 		if (inDesignMode == '1') {
 			// edit mode
