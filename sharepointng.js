@@ -172,6 +172,25 @@
 		}
 	}
 
+	function experimental(){
+		// Global SP vars
+		/* g_wsaSiteTemplateId: CMSPUBLISHING#0 */
+
+		// JS file for Welcome Menu User
+		/*
+				// SP13
+				// Execute after sp.js
+  			SP.SOD.executeFunc("sp.js", "SP.ClientContext", runAfterSP);
+
+				// Old
+				ExecuteOrDelayUntilScriptLoaded(ReOrderUsername, "sp.js");
+				function ReOrderUsername() {
+					var userName = $('[id$=_Menu_t]').children("a").children("span").text();
+					console.log('userName: %s', userName);
+				}
+		*/
+	}
+
 	/**
 		* Helper functions
 		*/
