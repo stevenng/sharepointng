@@ -11,73 +11,73 @@
 
 	var sitesObj = [
 		{
-			'class': 'ng-blog',
+			'cssClass': 'ng-blog',
 			'path':  '/blog/'
 		},
 		{
-			'class': 'ng-collaborate',
+			'cssClass': 'ng-collaborate',
 			'path':  '/collaborate/'
 		},
 		{
-			'class': 'ng-communityportal',
+			'cssClass': 'ng-communityportal',
 			'path':  '/communityportal/'
 		},
 		{
-			'class': 'ng-department',
+			'cssClass': 'ng-department',
 			'path':  '/department/'
 		},		
 		{
-			'class': 'ng-knowledgecenter',
+			'cssClass': 'ng-knowledgecenter',
 			'path':  '/knowledgecenter/'
 		},
 		{
-			'class': 'ng-personal',
+			'cssClass': 'ng-personal',
 			'path':  '/personal/'
 		},
 		{
-			'class': 'ng-search',
+			'cssClass': 'ng-search',
 			'path':  '/search/'
 		}
 	]; 
 
 	var sectionsObj = [
 		{
-			'class': 'ng-lists',
+			'cssClass': 'ng-lists',
 			'path':  '/lists/'
 		},
 		{
-			'class': 'ng-pages',
+			'cssClass': 'ng-pages',
 			'path':  '/pages/'
 		},
 		{
-			'class': 'ng-system',
+			'cssClass': 'ng-system',
 			'path':  '/_layouts/'
 		}
 	];
 
 	var pagesObj = [
 		{
-			'class': 'ng-allitems',
+			'cssClass': 'ng-allitems',
 			'path':  '/allitems.aspx'
 		},
 		{
-			'class': 'ng-default',
+			'cssClass': 'ng-default',
 			'path':  '/default.aspx'
 		},
 		{
-			'class': 'ng-lists',
+			'cssClass': 'ng-lists',
 			'path':  '/viewlsts.aspx'
 		},
 		{
-			'class': 'ng-person',
+			'cssClass': 'ng-person',
 			'path':  '/person.aspx'
 		},
 		{
-			'class': 'ng-settings',
+			'cssClass': 'ng-settings',
 			'path':  '/settings.aspx'
 		},
 		{
-			'class': 'ng-404',
+			'cssClass': 'ng-404',
 			'path':  '/pagenotfounderror.aspx'
 		}
 	];
@@ -147,7 +147,7 @@
 
 	function siteType(){
 		for(var i=0; i<sitesObj.length; i++) {
-			var classname = sitesObj[i].class;
+			var classname = sitesObj[i].cssClass;
 			var pathfile 	= sitesObj[i].path;
 
 			addClassToArray(classname, pathfile);
@@ -156,7 +156,7 @@
 
 	function sectionType(){
 		for(var i=0; i<sectionsObj.length; i++) {
-			var classname = sectionsObj[i].class;
+			var classname = sectionsObj[i].cssClass;
 			var pathfile 	= sectionsObj[i].path;
 
 			addClassToArray(classname, pathfile);
@@ -165,7 +165,7 @@
 
 	function pageType(){
 		for(var i=0; i<pagesObj.length; i++) {
-			var classname = pagesObj[i].class;
+			var classname = pagesObj[i].cssClass;
 			var pathfile 	= pagesObj[i].path;
 
 			addClassToArray(classname, pathfile);
