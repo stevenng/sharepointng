@@ -172,6 +172,22 @@
 		}
 	}
 
+	function orientationType(){
+		var o = window.orientation;
+ 		if (o != 90 && o != -90) {
+	    // here goes code for portrait...
+	    // className = 'ng-portrait';
+	    el.classList.remove('ng-landscape');
+	    el.classList.add('ng-portrait');
+	  } else {
+	    // here goes for landscape...
+	    // className = 'ng-landscape';
+	    el.classList.remove('ng-portrait');
+	    el.classList.add('ng-landscape');
+	  }
+	  // classArray.push(className);
+	}
+
 	function experimental(){
 		// Global SP vars
 		/* g_wsaSiteTemplateId: CMSPUBLISHING#0 */
@@ -217,6 +233,7 @@
 		siteType();
 		sectionType();
 		pageType();
+		orientationType();
 
 		for(var i=0; i<classArray.length; i++){
 			addClassName(classArray[i]);
@@ -227,5 +244,10 @@
 		*	Execute
 		*/
 	run();
+
+	// Listen for orientation changes
+	window.addEventListener("orientationchange", function() {
+		orientationType();
+	}, false);
 
 })();
