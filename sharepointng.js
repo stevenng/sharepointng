@@ -125,6 +125,15 @@
 		if(navigator.userAgent.indexOf("MSIE 10.0") != -1) {
 			className = 'ng-ie10';
 		}
+		else if (navigator.userAgent.indexOf("MSIE 9.0") != -1) {
+			className = 'ng-ie9';
+		}
+		else if (navigator.userAgent.indexOf("MSIE 8.0") != -1) {
+			className = 'ng-ie8';
+		}
+		else if (navigator.userAgent.indexOf("MSIE 7.0") != -1) {
+			className = 'ng-ie7';
+		}
 		else if (navigator.userAgent.indexOf("Chrome") != -1) {
 			className = 'ng-chrome';
 		}
@@ -173,19 +182,20 @@
 	}
 
 	function orientationType(){
-		var o = window.orientation;
- 		if (o != 90 && o != -90) {
-	    // here goes code for portrait...
-	    // className = 'ng-portrait';
-	    el.classList.remove('ng-landscape');
-	    el.classList.add('ng-portrait');
-	  } else {
-	    // here goes for landscape...
-	    // className = 'ng-landscape';
-	    el.classList.remove('ng-portrait');
-	    el.classList.add('ng-landscape');
-	  }
-	  // classArray.push(className);
+		if(navigator.userAgent.indexOf("Safari") != -1) {
+
+			var o = window.orientation;
+	 		if (o != 90 && o != -90) {
+		    // here goes code for portrait...
+		    // classList.remove not supported by IE9 or less
+		    el.classList.remove('ng-landscape');
+		    el.classList.add('ng-portrait');
+		  } else {
+		    // here goes for landscape...
+		    el.classList.remove('ng-portrait');
+		    el.classList.add('ng-landscape');
+		  }
+	 	}
 	}
 
 	function experimental(){
@@ -245,9 +255,10 @@
 		*/
 	run();
 
-	// Listen for orientation changes
-	window.addEventListener("orientationchange", function() {
-		orientationType();
-	}, false);
-
+	// Listen for iPad orientation changes
+	if(navigator.userAgent.indexOf("Safari") != -1) {
+		window.addEventListener("orientationchange", function() {
+			orientationType();
+		}, false);
+	}
 })();
